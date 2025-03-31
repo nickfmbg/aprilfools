@@ -39,11 +39,14 @@
                 document.getElementById("start").style.display = "inline-block";
             }, 2000);
         };
-        document.getElementById("start").onclick = function() {
-            document.body.innerHTML = '<h1>😂 April Fools! 😂</h1>';
-            document.body.style.backgroundColor = "red";
-            document.getElementById("prankSound").play();
-        };
+document.getElementById("start").onclick = function() {
+    document.body.innerHTML = '<h1>😂 April Fools! 😂</h1>';
+    document.body.style.backgroundColor = "red";
+
+    let audio = document.getElementById("prankSound");
+    audio.play().catch(error => console.log("Autoplay blocked:", error));
+};
+
     </script>
 </body>
 </html>
