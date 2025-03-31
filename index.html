@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loading...</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: black;
+            color: white;
+            font-family: Arial, sans-serif;
+            text-align: center;
+        }
+        #start {
+            background: white;
+            color: black;
+            padding: 10px 20px;
+            border: none;
+            font-size: 18px;
+            cursor: pointer;
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <h2>Loading...</h2>
+        <button id="start">Click to continue</button>
+    </div>
+    <audio id="prankSound" src="https://www.myinstants.com/media/sounds/trollolol.mp3"></audio>
+    <script>
+        window.onload = function() {
+            setTimeout(() => {
+                document.querySelector("h2").innerText = "Click to continue";
+                document.getElementById("start").style.display = "inline-block";
+            }, 2000);
+        };
+        document.getElementById("start").onclick = function() {
+            document.body.innerHTML = '<h1>😂 April Fools! 😂</h1>';
+            document.body.style.backgroundColor = "red";
+            document.getElementById("prankSound").play();
+        };
+    </script>
+</body>
+</html>
