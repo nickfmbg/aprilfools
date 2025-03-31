@@ -31,7 +31,11 @@
         <h2>Loading...</h2>
         <button id="start">Click to continue</button>
     </div>
-    <audio id="prankSound" src="https://voca.ro/1oPrLRJTXEcF"></audio>
+    <div>
+        <iframe width="300" height="60" src="https://vocaroo.com/embed/1oPrLRJTXEcF?autoplay=0" frameborder="0" allow="autoplay"></iframe>
+        <br>
+        <a href="https://voca.ro/1oPrLRJTXEcF" title="Vocaroo Voice Recorder" target="_blank">View on Vocaroo &gt;&gt;</a>
+    </div>
     <script>
         window.onload = function() {
             setTimeout(() => {
@@ -39,14 +43,10 @@
                 document.getElementById("start").style.display = "inline-block";
             }, 2000);
         };
-document.getElementById("start").onclick = function() {
-    document.body.innerHTML = '<h1>😂 April Fools! 😂</h1>';
-    document.body.style.backgroundColor = "red";
-
-    let audio = document.getElementById("prankSound");
-    audio.play().catch(error => console.log("Autoplay blocked:", error));
-};
-
+        document.getElementById("start").onclick = function() {
+            document.body.innerHTML = '<h1>😂 April Fools! 😂</h1>';
+            document.body.style.backgroundColor = "red";
+        };
     </script>
 </body>
 </html>
